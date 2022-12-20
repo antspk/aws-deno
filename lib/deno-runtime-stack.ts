@@ -12,10 +12,10 @@ export class DenoRuntimeLayerStack extends Stack {
       code: Code.fromAsset(props.runtimePath),
       license: 'Apache-2.0',
       description: 'A deno runtime layer',
-    })
+    });
   }
 }
 
 export interface DenoRuntimeLayerProps extends StackProps {
-  readonly runtimePath: string
+  readonly runtimePath: string;
 }

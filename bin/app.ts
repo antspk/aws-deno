@@ -7,7 +7,7 @@ import { dirname, fromFileUrl, join } from 'https://deno.land/std@0.167.0/path/m
 const app = new cdk.App();
 
 const denoRuntimeStack = new DenoRuntimeLayerStack(app, 'DenoRuntimeLayerStack', {
-  runtimePath: join(dirname(fromFileUrl(import.meta.url)), '../runtime')
+  runtimePath: join(dirname(fromFileUrl(import.meta.url)), '../runtime'),
 });
 
 const appStack = new DenoAppStack(app, 'DenoCdkAppStack', {
