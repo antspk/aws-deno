@@ -1,0 +1,27 @@
+{
+  "tasks": {
+    "download": "deno run --allow-net --allow-write ./tools/download.ts"
+  },
+  "lint": {
+    "files": {
+      "include": ["bin/", "lib/"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["bin/", "lib/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 120,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  }
+}
