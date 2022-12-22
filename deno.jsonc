@@ -1,11 +1,8 @@
 {
-  "tasks": {
-    "download": "deno run --allow-net --allow-write ./tools/download.ts"
-  },
   "lock": true,
   "lint": {
     "files": {
-      "include": ["bin/", "lib/"]
+      "include": ["bin/", "lib/", "deno-lambda/"]
     },
     "rules": {
       "tags": ["recommended"],
@@ -15,7 +12,7 @@
   },
   "fmt": {
     "files": {
-      "include": ["bin/", "lib/"]
+      "include": ["bin/", "lib/", "deno-lambda/"]
     },
     "options": {
       "useTabs": false,

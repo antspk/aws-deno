@@ -3,5 +3,5 @@ This directory needs to container deno executiable that will be uploaded to aws 
 
 Run following deno task to download the executable.
 ```shell
-deno task download
+deno run --allow-net --allow-write ./download.ts
 ```

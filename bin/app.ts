@@ -1,7 +1,7 @@
 #!/usr/bin/env deno
 import * as cdk from 'npm:aws-cdk-lib';
 import { DenoAppStack } from '../lib/deno-app-stack.ts';
-import { DenoRuntimeLayerStack } from '../lib/deno-runtime-stack.ts';
+import { DenoRuntimeLayerStack } from '../deno-lambda/lib/deno-runtime-stack.ts';
 import { dirname, fromFileUrl, join } from 'https://deno.land/std@0.167.0/path/mod.ts';
 
 const app = new cdk.App();

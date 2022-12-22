@@ -1,12 +1,47 @@
-import { Function, FunctionOptions } from 'npm:aws-cdk-lib/aws-lambda';
+import { dirname, fromFileUrl, join } from 'https://deno.land/std@0.167.0/path/mod.ts';
+import { Function, FunctionOptions, LayerVersion, Runtime, AssetCode, Code } from 'npm:aws-cdk-lib/aws-lambda';
 import { Construct } from 'npm:constructs';
 
 export class DenoLambdaFunction extends Function {
-  constructor(scope: Construct, id: string, props: DenoFunctionProps = {}) {
+  constructor(scope: Construct, id: string, props: DenoFunctionProps) {
     // todo create a construct similar to NodejsLambdaFunction
     // https://github.com/aws/aws-cdk/blob/v1-main/packages/%40aws-cdk/aws-lambda-nodejs/lib/function.ts
-    super(scope, id, props);
+
+    const handler = props.handler ?? 'handler';
+
+    // const __dirname = dirname(fromFileUrl(import.meta.url));
+    // code: Code.fromAsset(join(__dirname, 'lambda')),
+    // handler: 'deno-fn.handler',
+
+    // figure out how to deploy runtime layer only once per stack
+    const runtimePath = fromFileUrl(join(dirname(import.meta.url), '../runtime'))
+
+    const denoRuntimeLayer = new LayerVersion(this, 'DenoRuntime', {
+      code: Code.fromAsset(runtimePath),
+      license: 'Apache-2.0',
+      description: 'A deno runtime layer',
+    });
+
+    super(scope, id, {
+      ...props,
+      runtime: Runtime.PROVIDED_AL2,
+      layers: [denoRuntimeLayer],
+    });
   }
+}
+
+export class DenoLambdaFunctionBundling {
+
+
+  static bundle(options: BundlingProps): AssetCode {
+    return Code.fromAsset();
+  }
+
+
+}
+
+export interface BundlingProps {
+
 }
 
 export interface DenoFunctionProps extends FunctionOptions {

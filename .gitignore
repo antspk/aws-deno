@@ -103,8 +103,9 @@ dist
 # TernJS port file
 .tern-port
 
-# VS Code
+# VS Code & InteliJ
 .vscode/
+.idea/
 
 # Deno rumtime bin
-runtime/bin/deno
+deno-lambda/runtime/bin/deno
