@@ -4,7 +4,6 @@ import { DenoAppStack } from '../lib/deno-app-stack.ts';
 
 const app = new App();
 
-
 // const denoRuntimeStack = new DenoRuntimeLayerStack(app, 'DenoRuntimeLayerStack', {
 //   runtimePath: join(dirname(fromFileUrl(import.meta.url)), '../runtime'),
 // });
@@ -22,7 +21,6 @@ const appStack = new DenoAppStack(app, 'DenoCdkAppStack', {
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
   env: { account: '247154245606', region: 'us-east-1' },
-
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
 

@@ -2,7 +2,7 @@
   "lock": true,
   "lint": {
     "files": {
-      "include": ["bin/", "lib/", "deno-lambda/"]
+      "include": ["bin/", "lib/"]
     },
     "rules": {
       "tags": ["recommended"],
@@ -12,7 +12,7 @@
   },
   "fmt": {
     "files": {
-      "include": ["bin/", "lib/", "deno-lambda/"]
+      "include": ["bin/", "lib/"]
     },
     "options": {
       "useTabs": false,
