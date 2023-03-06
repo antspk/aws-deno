@@ -108,4 +108,4 @@ dist
 .idea/
 
 # Deno rumtime bin
-deno-lambda/runtime/bin/deno
+aws-lambda-deno-runtime/bin/deno

@@ -21,5 +21,9 @@
       "singleQuote": true,
       "proseWrap": "preserve"
     }
+  },
+  "tasks": {
+    "deploy": "deno run -A npm:aws-cdk deploy",
+    "destroy": "deno run -A npm:aws-cdk destroy",
   }
 }
