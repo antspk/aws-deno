@@ -15,6 +15,7 @@
   },
   "npm": {
     "specifiers": {
+      "aws-cdk": "aws-cdk@2.66.1",
       "aws-cdk-lib": "aws-cdk-lib@2.66.1_constructs@10.1.192",
       "aws-cdk-lib@2.66.1": "aws-cdk-lib@2.66.1_constructs@10.1.192",
       "constructs": "constructs@10.1.264"
@@ -84,6 +85,12 @@
           "yaml": "yaml@1.10.2"
         }
       },
+      "aws-cdk@2.66.1": {
+        "integrity": "sha512-exm97/VOH6yZPN2is3UC0acc6KF56AANvCg2gAEhyu6dPBueKxNCzrvsjNg/vmXrA8HqJ2jYJMg88YRNaUfylA==",
+        "dependencies": {
+          "fsevents": "fsevents@2.3.2"
+        }
+      },
       "balanced-match@1.0.2": {
         "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
         "dependencies": {}
@@ -119,6 +126,10 @@
           "jsonfile": "jsonfile@6.1.0",
           "universalify": "universalify@2.0.0"
         }
+      },
+      "fsevents@2.3.2": {
+        "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==",
+        "dependencies": {}
       },
       "graceful-fs@4.2.10": {
         "integrity": "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==",

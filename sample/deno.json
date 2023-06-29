@@ -24,6 +24,7 @@
   },
   "tasks": {
     "deploy": "deno run -A npm:aws-cdk deploy",
-    "destroy": "deno run -A npm:aws-cdk destroy",
+    "destroy": "deno run -A npm:aws-cdk destroy"
   }
 }
+ 

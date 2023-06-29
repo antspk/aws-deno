@@ -109,3 +109,4 @@ dist
 
 # Deno rumtime bin
 runtime/bin/deno
+sample/cdk.out
