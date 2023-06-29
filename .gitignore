@@ -108,3 +108,4 @@ dist
 .idea/
 
 # Deno rumtime bin
+runtime/bin/deno
